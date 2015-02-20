@@ -38,7 +38,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-
+ 
   .state('app.serveis', {
     url: "/serveis",
     views: {
@@ -48,12 +48,24 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-    .state('app.manteniment', {
-      url: "/manteniment",
+  .state('app.serveidetail', {
+    url: "/serveis/:serveiId",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/serveidetail.html",
+           controller: 'ServeisCtrl'
+      }
+    }
+  })
+  
+ 
+ 
+    .state('app.serveiStart', {
+      url: "/serveiStart",
       views: {
         'menuContent': {
-          templateUrl: "templates/manteniment.html",
-          controller: 'PlaylistsCtrl'
+          templateUrl: "templates/serveidetailStart.html",
+          controller: 'ServeisCtrl'
         }
       }
     })

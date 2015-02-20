@@ -1,0 +1,34 @@
+  
+
+ 
+     
+<ion-view view-title="Detall">
+   
+       <ion-header-bar class="bar-positive">
+          <button class="button button-clear" ng-click="newTask()">New</button>
+          <h1 class="title">Serveis</h1>
+        </ion-header-bar>
+     <ion-content has-tabs="true" has-header="true">   
+     <div class="card">
+  <div class="item item-divider">
+   <h3>Xavie Barrufet</h3>
+      <p>C/Jaume I 40 6 3</p>
+  </div>
+  <div class="item item-text-wrap">
+    <ion-list>      
+           <label class="checkbox">
+        <input type="checkbox" ng-click="clickItem(item); $event.stopPropagation();" ng-model="item.checked">
+     </label>
+          <ion-item ng-repeat="tasca in Tasques" href="#/app/serveis/{{servei.id}}">
+                <p>{{tasca.Descripcio}}</p> 
+            </ion-item>
+        </ion-list>
+  </div>
+</div>
+<div style="margin: 20px;  padding:20px;text-align: center;">
+            <button class="button icon-left ion-camera button-positive">Scan</button>
+              <button class="button icon-left ion-stop button-positive">Finalitzar</button>
+            </div>         
+    </ion-content>
+  
+</ion-view> 

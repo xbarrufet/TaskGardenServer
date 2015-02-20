@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout,$state) {
   // Form data for the login modal
   $scope.loginData = {};
 
@@ -33,8 +33,15 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('ServeisCtrl', function($scope) {
-  $scope.ServeisActius = [
+.controller('ServeisCtrl', function($scope,$state,$location) {
+ 
+    $scope.Tasques = [{Descripcio:'Tallar gespa'},{Descripcio:'Podar  arbres'},{Descripcio:'Fumigar'}]
+
+     $scope.go = function ( path ) {
+        $state.go(path); 
+  };
+    
+    $scope.ServeisActius = [
     { id: 1, Client: 'Xavier Barrufet', Adressa: 'C/Jaume I 40', DataActiu:'20/11/2014' ,Prioritat:'Alta', Status:'Pendent', Tasques:[{Descripcio:'Tallar gespa',Status:'Pendent'},{Descripcio:'Podar  arbres',Status:'Pendent'},{Descripcio:'Fumigar',Status:'Pendent'}]},
     { id: 2, Client: 'Toni Duran', Adressa: 'C/Verge Montserrat 11', DataActiu:'13/02/2015', Prioritat:'Alta', Status:'Pendent', Tasques:[{Descripcio:'Tallar gespa',Status:'Pendent'},{Descripcio:'Podar  arbres',Status:'Pendent'},{Descripcio:'Fumigar',Status:'Pendent'}]},
     { id: 3, Client: 'Kevin Roldan', Adressa: 'C/Valencia 24', DataActiu:'17/01/2015', Prioritat:'Normal', Status:'Parcial', Tasques:[{Descripcio:'Tallar gespa',Status:'Acabat'},{Descripcio:'Podar  arbres',Status:'Acabat'},{Descripcio:'Fumigar',Status:'Pendent'}]}
@@ -46,7 +53,7 @@ angular.module('starter.controllers', [])
             ];
 })
 
-
+ 
 
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
