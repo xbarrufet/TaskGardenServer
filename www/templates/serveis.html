@@ -4,24 +4,29 @@
      
 <ion-view view-title="Serveis">
    
-   
-    <ion-header-bar class="bar-positive">
-          <button class="button button-clear" ng-click="newTask()">New</button>
-          <h1 class="title">Serveis</h1>
-        </ion-header-bar>
+   <ion-nav-bar class="bar-positive">
+      </ion-nav-bar>
        
         <ion-content has-tabs="true" has-header="true"> 
         <div>    
+            <div style="margin: 20px;  text-align: center;">
+            <button class="button button-small icon-left ion-camera button-positive">Scan</button>
+            </div>
             <ion-list>
-              <ion-item ng-repeat="servei in ServeisActius" href="#/app/serveis/{{servei.id}}">
-               <h3>{{servei.Client}}</h3>
-                            <p>{{servei.Adressa}}</p> 
-              
+              <ion-item ng-repeat="servei in ServeisActius" href="#/serveis/{{servei.id}}">
+                  <div>  
+                  <div style="float:left">
+                    <h3>{{servei.Client}}</h3>
+                    <p>{{servei.Adressa}}</p>
+                    </div>
+                    <div style="float:right">                     
+                        <p class="icon ion-alert-circled"><b>&nbsp;Inicidencies:</b>{{servei.NumIncidencies}}</p>
+                        <p><b>Tasques:</b>{{servei.NumTasques}}</p>
+                    </div>
+                  </div>
                 </ion-item>
             </ion-list>
-            <div style="margin: 20px;  text-align: center;">
-            <button class="button icon-left ion-camera button-positive">Scan</button>
-            </div>
+        </div>    
             
    </ion-content>
   

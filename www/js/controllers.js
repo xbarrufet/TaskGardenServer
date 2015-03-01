@@ -33,7 +33,7 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('ServeisCtrl', function($scope,$state,$location) {
+.controller('ServeisCtrl', function($scope,$state,$stateParams,$location) {
  
     $scope.Tasques = [{Descripcio:'Tallar gespa'},{Descripcio:'Podar  arbres'},{Descripcio:'Fumigar'}]
 
@@ -41,16 +41,16 @@ angular.module('starter.controllers', [])
         $state.go(path); 
   };
     
+   $scope.parametres=$stateParams;
+    
     $scope.ServeisActius = [
-    { id: 1, Client: 'Xavier Barrufet', Adressa: 'C/Jaume I 40', DataActiu:'20/11/2014' ,Prioritat:'Alta', Status:'Pendent', Tasques:[{Descripcio:'Tallar gespa',Status:'Pendent'},{Descripcio:'Podar  arbres',Status:'Pendent'},{Descripcio:'Fumigar',Status:'Pendent'}]},
-    { id: 2, Client: 'Toni Duran', Adressa: 'C/Verge Montserrat 11', DataActiu:'13/02/2015', Prioritat:'Alta', Status:'Pendent', Tasques:[{Descripcio:'Tallar gespa',Status:'Pendent'},{Descripcio:'Podar  arbres',Status:'Pendent'},{Descripcio:'Fumigar',Status:'Pendent'}]},
-    { id: 3, Client: 'Kevin Roldan', Adressa: 'C/Valencia 24', DataActiu:'17/01/2015', Prioritat:'Normal', Status:'Parcial', Tasques:[{Descripcio:'Tallar gespa',Status:'Acabat'},{Descripcio:'Podar  arbres',Status:'Acabat'},{Descripcio:'Fumigar',Status:'Pendent'}]}
+    { id: 1, Client: 'Xavier Barrufet', Adressa: 'C/Jaume I 40', DataActiu:'20/11/2014' ,Prioritat:'Alta', Status:'Pendent', NumIncidencies:1,NumTasques:2,Tasques:[{Descripcio:'Tallar gespa',Status:'Pendent',Tipus:'Incidencia'},{Descripcio:'Podar  arbres',Status:'Pendent',Tipus:'Servei'},{Descripcio:'Fumigar',Status:'Pendent',Tipus:'Servei'}]},
+    { id: 2, Client: 'Toni Duran', Adressa: 'C/Verge Montserrat 11', DataActiu:'13/02/2015', Prioritat:'Alta', Status:'Pendent',NumIncidencies:1,NumTasques:2,Tasques:[{Descripcio:'Tallar gespa',Status:'Pendent',Tipus:'Incidencia'},{Descripcio:'Podar  arbres',Status:'Pendent',Tipus:'Servei'},{Descripcio:'Fumigar',Status:'Pendent',Tipus:'Servei'}]},
+    { id: 3, Client: 'Kevin Roldan', Adressa: 'C/Valencia 24', DataActiu:'17/01/2015', Prioritat:'Normal', Status:'Parcial', NumIncidencies:1,NumTasques:2,Tasques:[{Descripcio:'Tallar gespa',Status:'Pendent',Tipus:'Incidencia'},{Descripcio:'Podar  arbres',Status:'Pendent',Tipus:'Servei'},{Descripcio:'Fumigar',Status:'Pendent',Tipus:'Servei'}]}
   ];
-       
-  $scope.Serveis = [
-    { id: 4, Client: 'Mike McGowan', Adressa: 'C/Diagonal 155', DataUltimServei:'17/01/2015', Tasques:[{Descripcio:'Tallar gespa'},{Descripcio:'Podar  arbres'},{Descripcio:'Fumigar'}]},
-    { id: 5, Client: 'Tom Bones', Adressa: 'C/Muntaner 180', DataUltimServei:'17/01/2015', Tasques:[{Descripcio:'Tallar gespa'},{Descripcio:'Podar  arbres'},{Descripcio:'Fumigar'}]},
-            ];
+     
+   $scope.serveiSelected =  $scope.ServeisActius[$stateParams.serveiId-1];   
+ 
 })
 
  

@@ -23,71 +23,26 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-  .state('app', {
-    url: "/app",
-    abstract: true,
-    templateUrl: "templates/menu.html",
-    controller: 'AppCtrl'
-  })
-
-  .state('app.clients', {
-    url: "/clients",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/clients.html"
-      }
-    }
-  })
- 
-  .state('app.serveis', {
-    url: "/serveis",
-    views: {
-      'menuContent': {
+  .state('serveis', {
+        url: "/serveis",
         templateUrl: "templates/serveis.html",
-           controller: 'ServeisCtrl'
-      }
+        controller: 'ServeisCtrl'
     }
-  })
-  .state('app.serveidetail', {
+  )
+  .state('serveidetail', {
     url: "/serveis/:serveiId",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/serveidetail.html",
-           controller: 'ServeisCtrl'
-      }
-    }
+    templateUrl: "templates/serveidetail.html",
+    controller: 'ServeisCtrl'
+      
   })
   
- 
- 
-    .state('app.serveiStart', {
-      url: "/serveiStart",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/serveidetailStart.html",
-          controller: 'ServeisCtrl'
-        }
-      }
-    })
-
-    .state('app.playlists', {
-      url: "/playlists",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/playlists.html",
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
-  .state('app.single', {
-    url: "/playlists/:playlistId",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/playlist.html",
-        controller: 'PlaylistCtrl'
-      }
-    }
+   .state('serveidetailStart', {
+    url: "/serveidetailStart/:serveiId",
+    templateUrl: "templates/serveidetailStart.html",
+    controller: 'ServeisCtrl'
+      
   });
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/serveis');
+ 
+    // if none of the above states are matched, use this as the fallback
+  $urlRouterProvider.otherwise('/serveis');
 });

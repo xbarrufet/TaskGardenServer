@@ -4,31 +4,30 @@
      
 <ion-view view-title="Detall">
    
-       <ion-header-bar class="bar-positive">
-          <button class="button button-clear" ng-click="newTask()">New</button>
-          <h1 class="title">Serveis</h1>
-        </ion-header-bar>
+    <ion-nav-bar class="bar-positive">
+    </ion-nav-bar>
      <ion-content has-tabs="true" has-header="true">   
+     <div style="margin: 5px;  padding:5px;text-align: center;">
+            <button class="button button-small icon-left ion-camera button-positive" >Foto</button>
+            <button class="button button-small icon-left ion-play button-positive" ng-click="go('serveis')">Finalitzar</button>
+            <button class="button button-small icon-left ion-camera button-positive" >Scan</button>
+          
+         </div>        
      <div class="card">
   <div class="item item-divider">
    <h3>Xavie Barrufet</h3>
       <p>C/Jaume I 40 6 3</p>
   </div>
   <div class="item item-text-wrap">
-    <ion-list>      
-           <label class="checkbox">
-        <input type="checkbox" ng-click="clickItem(item); $event.stopPropagation();" ng-model="item.checked">
-     </label>
-          <ion-item ng-repeat="tasca in Tasques" href="#/app/serveis/{{servei.id}}">
-                <p>{{tasca.Descripcio}}</p> 
-            </ion-item>
-        </ion-list>
+    <div class="list">        
+        <ion-checkbox ng-repeat="tasca in Tasques"
+                      ng-model="tasca.checked" 
+                      ng-checked="tasca.checked">
+          {{ tasca.Descripcio }}
+        </ion-checkbox>
   </div>
 </div>
-<div style="margin: 20px;  padding:20px;text-align: center;">
-            <button class="button icon-left ion-camera button-positive">Scan</button>
-              <button class="button icon-left ion-stop button-positive">Finalitzar</button>
-            </div>         
+     
     </ion-content>
   
 </ion-view> 
