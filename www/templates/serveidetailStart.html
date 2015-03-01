@@ -1,33 +1,12 @@
   
 
  
-     
-<ion-view view-title="Detall">
-   
-    <ion-nav-bar class="bar-positive">
-    </ion-nav-bar>
-     <ion-content has-tabs="true" has-header="true">   
-     <div style="margin: 5px;  padding:5px;text-align: center;">
-            <button class="button button-small icon-left ion-camera button-positive" >Foto</button>
-            <button class="button button-small icon-left ion-play button-positive" ng-click="go('serveis')">Finalitzar</button>
-            <button class="button button-small icon-left ion-camera button-positive" >Scan</button>
-          
-         </div>        
-     <div class="card">
-  <div class="item item-divider">
-   <h3>Xavie Barrufet</h3>
-      <p>C/Jaume I 40 6 3</p>
-  </div>
-  <div class="item item-text-wrap">
-    <div class="list">        
-        <ion-checkbox ng-repeat="tasca in Tasques"
-                      ng-model="tasca.checked" 
-                      ng-checked="tasca.checked">
-          {{ tasca.Descripcio }}
-        </ion-checkbox>
-  </div>
-</div>
-     
-    </ion-content>
-  
-</ion-view> 
+   function alerta(msg) {
+        var alertPopup = $ionicPopup.confirm({
+            title: 'Task Garden',
+            template: msg
+        });
+        alertPopup.then(function(res) {
+            console.log('Thank you for not eating my delicious ice cream cone');
+        });
+    }

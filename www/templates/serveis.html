@@ -2,7 +2,7 @@
 
  
      
-<ion-view view-title="Serveis">
+<ion-view view-title="Serveis V2">
    
    <ion-nav-bar class="bar-positive">
       </ion-nav-bar>
@@ -10,18 +10,19 @@
         <ion-content has-tabs="true" has-header="true"> 
         <div>    
             <div style="margin: 20px;  text-align: center;">
-            <button class="button button-small icon-left ion-camera button-positive">Scan</button>
+            <button class="button button-small icon-left ion-camera button-positive" ng-click="scanQRCode()">Scan</button>
+            <!-- <button class="button button-small icon-left ion-camera button-positive" ng-click="testScan('112233445566')">Scan Test</button>   --> 
             </div>
             <ion-list>
-              <ion-item ng-repeat="servei in ServeisActius" href="#/serveis/{{servei.id}}">
+              <ion-item ng-repeat="servei in ServeisActius" href="#/serveis/{{servei.codi}}/read">
                   <div>  
                   <div style="float:left">
                     <h3>{{servei.Client}}</h3>
                     <p>{{servei.Adressa}}</p>
                     </div>
                     <div style="float:right">                     
-                        <p class="icon ion-alert-circled"><b>&nbsp;Inicidencies:</b>{{servei.NumIncidencies}}</p>
-                        <p><b>Tasques:</b>{{servei.NumTasques}}</p>
+                        <p class="icon ion-alert-circled"><b>&nbsp;Inicidencies:</b><span style="float:right;text-align: right">{{servei.NumIncidencies}}</span></p>
+                        <p><b>Tasques:</b><span style="float:right;text-align: right">{{servei.NumTasques}}</span></p>
                     </div>
                   </div>
                 </ion-item>

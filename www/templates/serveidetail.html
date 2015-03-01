@@ -9,24 +9,45 @@
       </ion-nav-back-button>
     </ion-nav-bar>
      <ion-content has-tabs="true" has-header="true">   
+         
+       
          <div style="margin: 5px;  padding:5px;text-align: center;">
-                        <button class="button button-small icon-left ion-camera button-positive" >Scan</button>
-                          <button class="button button-small icon-left ion-play button-positive" ng-click="go('serveidetailStart')">Iniciar</button>
-                        </div>         
+                        <button ng-show="modus == 'read'" class="button button-small icon-left ion-camera button-positive" ng-click="scanQRCode()">Scan</button>
+             <button ng-show="modus == 'edit'" class="button button-small icon-left ion-camera button-positive" ng-click="scanQRCodeEND()">Scan</button>
+                        <button ng-show="modus == 'read'" class="button button-small icon-left ion-play button-positive" ng-click="entrarServei()">Iniciar</button>
+                         <button ng-show="modus == 'edit'" class="button button-small icon-left ion-play button-positive" ng-click="entrarServei()">Finalitzar</button>
+                        </div>
+          <!-- <button ng-show="modus == 'edit'" class="button button-small icon-left ion-camera button-positive" ng-click="testScanEND('112233445566')">Scan Test</button>  -->  
     
      <div class="card">
             <div class="item item-divider">
                <h3>{{serveiSelected.Client}}</h3>
                   <p>{{serveiSelected.Adressa}}</p>
             </div>
-            <div class="item item-text-wrap">
+            <div class="item item-text-wrap" ng-show="modus == 'read'">
                 <ion-list>
                       <ion-item ng-repeat="tasca in serveiSelected.Tasques" >
                             <p>{{tasca.Descripcio}}</p> 
                         </ion-item>
                     </ion-list>
             </div>
-            </div>
+             <div class="item item-text-wrap" ng-show="modus == 'edit'">
+            <div class="list">        
+                <ion-checkbox ng-repeat="tasca in Tasques"
+                              ng-model="tasca.checked" 
+                              ng-checked="tasca.checked">
+                  {{ tasca.Descripcio }}
+                  
+                     </ion-checkbox>
+                  
+          </div>
+                 
+    </div>
+         
+  </div>
+    <div style="margin: 5px;  padding:5px;text-align: center;">      
+     <button  class="button button-small icon-right ion-camera button-positive" ng-click="getPicture()" >foto</button> 
+         </div>
             </ion-content>
   
 </ion-view> 
