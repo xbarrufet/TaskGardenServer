@@ -1,0 +1,156 @@
+  
+
+ 
+     
+<ion-view view-title="Serveis V2">
+   
+   <ion-nav-bar class="bar-positive">
+  </ion-nav-bar>
+       
+        <ion-content has-tabs="true" has-header="true"> 
+        <ion-slide-box on-slide-changed="slideHasChanged($index)">
+          <ion-slide>
+            <a href= "#/serveis/setmana">Setmana</a>  
+           
+                <div class="LabelDia">Dimarts 24/04/2105</div> 
+                <div class="ServeiItemList">
+                <a href= "#/serveis/112233445566/read">
+                <div class="ServeiItem INCIDENCIA">
+                    <div class="ServeiItemName " >
+                        <p class="Nom">Xavier Barrufet</p>
+                        <p class="Adreça">Gava</p>
+                    </div>
+                    <div class="ServeiItemNumber">
+                        <p class="NumTasques">10</p>
+                        <p class="LabelNumTasques">Tasques</p>
+                    </div>                   
+                </div>
+                </a>    
+                <a href= "#/serveis/112233445566/read">    
+                <div class="ServeiItem ADVERTENCIA">
+                    <div class="ServeiItemName" >
+                        <p class="Nom">John McEnroe</p>
+                        <p class="Adreça">Sant Cugat</p>
+                    </div>
+                    <div class="ServeiItemNumber">
+                        <p class="NumTasques">5</p>
+                        <p class="LabelNumTasques">Tasques</p>
+                    </div> 
+                </div>  
+                 </a>    
+                <a href= "#/serveis/112233445566/read">        
+                <div class="ServeiItem NORMAL">
+                   
+                    <div class="ServeiItemName" >
+                        <p class="Nom">Ruyard Kipling</p>
+                        <p class="Adreça">Badalona</p>
+                    </div>
+                    <div class="ServeiItemNumber">
+                        <p class="NumTasques">3</p>
+                        <p class="LabelNumTasques">Tasques</p>
+                    </div> 
+                </div>  
+                     </a>    
+                <a href= "#/serveis/112233445566/read">    
+                <div class="ServeiItem NORMAL">
+                    <div class="ServeiItemName" >
+                        <p class="Nom">Oriol Pujol</p>
+                        <p class="Adreça">La Modelo</p>
+                    </div>
+                    <div class="ServeiItemNumber">
+                        <p class="NumTasques">8</p>
+                        <p class="LabelNumTasques">Tasques</p>
+                    </div> 
+                </div> 
+                    </a>    
+                  
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <div class="LabelDia">Dimecres 25/04/2105</div> 
+                <div class="ServeiItem">
+                    <div class="ServeiItemName" >
+                        <p class="Nom">Xavier Barrufet</p>
+                        <p class="Adreça">Gava</p>
+                    </div>
+                    <div class="ServeiItemNumber">
+                        <p class="NumTasques">10</p>
+                        <p class="LabelNumTasques">Tasques</p>
+                    </div>                   
+                </div>  
+                <div class="ServeiItem INCIDENCIA">
+                    <div class="ServeiItemName" >
+                        <p class="Nom">John McEnroe</p>
+                        <p class="Adreça">Sant Cugat</p>
+                    </div>
+                    <div class="ServeiItemNumber">
+                        <p class="NumTasques">5</p>
+                        <p class="LabelNumTasques">Tasques</p>
+                    </div> 
+                </div>  
+                <div class="ServeiItem">
+                   
+                    <div class="ServeiItemName" >
+                        <p class="Nom">Ruyard Kipling</p>
+                        <p class="Adreça">Badalona</p>
+                    </div>
+                    <div class="ServeiItemNumber">
+                        <p class="NumTasques">3</p>
+                        <p class="LabelNumTasques">Tasques</p>
+                    </div> 
+                </div>  
+                <div class="ServeiItem">
+                    <div class="ServeiItemName" >
+                        <p class="Nom">Oriol Pujol</p>
+                        <p class="Adreça">La Modelo</p>
+                    </div>
+                    <div class="ServeiItemNumber">
+                        <p class="NumTasques">8</p>
+                        <p class="LabelNumTasques">Tasques</p>
+                    </div> 
+                </div>  
+                
+                
+            <button ng-click="nextSlide()">Next slide!</button>    
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <div class="box pink"><h1>PINK</h1></div>
+          </ion-slide>
+        </ion-slide-box>
+            
+        <!-- <div>    
+            <div style="margin: 20px;  text-align: center;">
+            <button class="button button-small icon-left ion-camera button-positive" ng-click="scanQRCode()">Scan</button> -->
+            <!-- <button class="button button-small icon-left ion-camera button-positive" ng-click="testScan('112233445566')">Scan Test</button>   --> 
+         <!--    </div>
+            <ion-list>
+              <ion-item ng-class="servei.Prioritat" ng-repeat="servei in ServeisActius | orderBy:'PrioritatOrdre'" href="#/serveis/{{servei.codi}}/read">
+                  <div >
+                      <div style="float:left">
+                        <h3 class="propietari">{{servei.Client}}</h3>
+                        <p>{{servei.Adressa}}</p>
+                      </div>
+                      <div style="float:right">  
+                          <p class="numTasques">Tasques:{{servei.NumTasques}}</p>
+                      </div>
+                  </div>
+                </ion-item>
+            </ion-list>
+        </div> -->    
+            
+   </ion-content>
+ <ion-footer-bar align-title="center" class="bar-positive">
+  <div class="buttons pull-left">
+    <i class="fa fa-camera fa-2x"></i>
+  </div>
+  <div class="buttons pull-center">
+    <i class="fa fa-camera fa-2x"></i>
+  </div>
+      <div class="buttons pull-right">
+    <i class="fa fa-camera fa-2x"></i>
+  </div>
+</ion-footer-bar>
+
+  
+</ion-view> 

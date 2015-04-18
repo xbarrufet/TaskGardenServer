@@ -1,0 +1,78 @@
+{
+  "Calendari": 
+  [
+    {
+      "Data":"12/04/2015",
+      "Visites": 
+      [
+       {
+          "IDJardi":"08",
+          "Jardi":"Xavier Barrufet",
+          "Estat":"PENDENT",
+          "Incidencia":true,
+          "Tasques":
+          [
+            {
+              "IDTasca":"01",
+              "Tasca":"Treure fulles",
+              "Estat":"PENDENT",
+              "Incidencia":false,
+              "Fotos":[]
+            },
+            {
+              "IDTasca":"08",
+              "Tasca":"Regar gespa",
+              "Estat":"PENDENT",
+              "Incidencia":false,
+              "Fotos":[]
+            },
+            {
+              "IDTasca":"04",
+              "Tasca":"Sulfatar",
+              "Estat":"PENDENT",
+              "Incidencia":false,
+              "Fotos":[]
+            },
+            {
+              "IDTasca":"IN",
+              "Tasca":"Temporitzador espatllat",
+              "Estat":"PENDENT",
+              "Incidencia":true,
+              "Fotos":[]
+            }
+          ]
+       },
+       {
+          "IDJardi":"12",
+          "Jardi":"Toni Duran",
+          "Estat":"VISITA",
+          "Incidencia":false,
+          "Tasques":
+          [
+            {
+              "IDTasca":"01",
+              "Tasca":"Treure fulles",
+              "Estat":"PENDENT",
+              "Incidencia":false,
+              "Fotos":[]
+            },
+            {
+              "IDTasca":"08",
+              "Tasca":"Regar gespa",
+              "Estat":"PENDENT",
+              "Incidencia":false,
+              "Fotos":[]
+            },
+            {
+              "IDTasca":"04",
+              "Tasca":"Sulfatar",
+              "Estat":"PENDENT",
+              "Incidencia":false,
+              "Fotos":[]
+            }
+          ]
+       }
+      ]
+    }
+  ]
+}

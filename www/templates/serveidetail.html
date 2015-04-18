@@ -11,43 +11,77 @@
      <ion-content has-tabs="true" has-header="true">   
          
        
-         <div style="margin: 5px;  padding:5px;text-align: center;">
-                        <button ng-show="modus == 'read'" class="button button-small icon-left ion-camera button-positive" ng-click="scanQRCode()">Scan</button>
-             <button ng-show="modus == 'edit'" class="button button-small icon-left ion-camera button-positive" ng-click="scanQRCodeEND()">Scan</button>
-                        <button ng-show="modus == 'read'" class="button button-small icon-left ion-play button-positive" ng-click="entrarServei()">Iniciar</button>
-                         <button ng-show="modus == 'edit'" class="button button-small icon-left ion-play button-positive" ng-click="entrarServei()">Finalitzar</button>
-                        </div>
+        <!-- <div style="margin: 5px;  padding:5px;text-align: center;">
+                        <button ng-show="modus == 'read'" class="button  icon-left ion-camera button-positive" ng-click="scanQRCode()">Scan</button>
+             <button ng-show="modus == 'edit'" class="button icon-left ion-camera button-positive" ng-click="scanQRCodeEND()">Scan</button>
+                        <button ng-show="modus == 'read'" class="button  icon-left ion-play button-positive" ng-click="entrarServei()">Iniciar</button>
+                         <button ng-show="modus == 'edit'" class="button  icon-left ion-play button-positive" ng-click="entrarServei()">Finalitzar</button>
+                        </div> -->
           <!-- <button ng-show="modus == 'edit'" class="button button-small icon-left ion-camera button-positive" ng-click="testScanEND('112233445566')">Scan Test</button>  -->  
     
-     <div class="card">
+    <div class="TaskItemHeader">     
+        <div class="TaskItemAdreça">
+            <p class="Nom">Xavier Barrufet</p>
+            <p class="Adreça">C/ Ntra Sra de la Merce 10 - Gava</p>    
+        </div>
+        <div class="TaskScanButton">
+            <i class="fa fa-qrcode fa-3x"></i>
+        </div>
+    </div>      
+    <div class="TaskItemList">
+        <div class="TaskItem">
+            <i class="fa fa-square-o fa-2x checkBox"/></i><span>Regar</span>
+            <i class="fa fa-camera fa-2x camara"></i>
+            <p class="numFotos">4</p>
+        </div>
+        <div class="TaskItem">
+            <i class="fa fa-square-o fa-2x checkBox"/></i><span>Ensofatar</span><i class="fa fa-camera fa-2x camara"></i>
+        </div>
+        <div class="TaskItem">
+            <i class="fa fa-square-o fa-2x checkBox"/></i><span>Treure Fulles</span><i class="fa fa-camera fa-2x camara"></i>
+        </div>
+       
+    </div>
+<a href= "#/serveis/crearIncidencia"><i class="fa fa-exclamation-circle fa-3x"></i></a>
+         
+     <!-- <div class="card">
             <div class="item item-divider">
                <h3>{{serveiSelected.Client}}</h3>
                   <p>{{serveiSelected.Adressa}}</p>
             </div>
             <div class="item item-text-wrap" ng-show="modus == 'read'">
                 <ion-list>
-                      <ion-item ng-repeat="tasca in serveiSelected.Tasques" >
+                      <ion-item ng-class="tasca.Prioritat" ng-repeat="tasca in serveiSelected.Tasques| orderBy:'PrioritatOrdre'" >
                             <p>{{tasca.Descripcio}}</p> 
                         </ion-item>
                     </ion-list>
             </div>
-             <div class="item item-text-wrap" ng-show="modus == 'edit'">
-            <div class="list">        
-                <ion-checkbox ng-repeat="tasca in Tasques"
-                              ng-model="tasca.checked" 
-                              ng-checked="tasca.checked">
-                  {{ tasca.Descripcio }}
-                  
-                     </ion-checkbox>
-                  
+             <div class="item item-text-wrap" ng-show="modus == 'edit'"> 
+                <ion-list  type="card">
+                        <ion-item class="rs-item item-icon-right" ng-class="tasca.Prioritat" ng-repeat="tasca in serveiSelected.Tasques| orderBy:'PrioritatOrdre'" >
+                        <div style="height:40px">    
+                        <div style="float:left"> 
+                            <input type="checkbox" 
+                               ng-class="tasca.Prioritat"
+                               ng-model="tasca.Acabada" 
+                               ng-change="validateCheckBox({{serveiSelected.codi}},{{tasca.tascaID}})"     
+                                >
+                                {{ tasca.Descripcio }}
+                            </input>
+                        </div>
+                        <div style="float:right">     
+                            <button class="button button-left icon-left ion-camera button-positive" ng-click="getPictureDev({{serveiSelected.codi}},{{tasca.tascaID}})">Fotos:{{tasca.fotos}}</button>
+                    </div>    
+                    </div>  
+                    </ion-item>    
+            </ion-list>
           </div>
                  
     </div>
          
-  </div>
-    <div style="margin: 5px;  padding:5px;text-align: center;">      
-     <button  class="button button-small icon-right ion-camera button-positive" ng-click="getPicture()" >foto</button> 
-         </div>
+  </div> -->
+         
+         
             </ion-content>
   
 </ion-view> 

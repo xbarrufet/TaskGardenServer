@@ -23,16 +23,9 @@ angular.module('starter', ['ionic', 'starter.controllers','ngCordova'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-  .state('serveisDia', {
-        url: "/serveis/dia",
-        templateUrl: "templates/serveisDia.html",
-        controller: 'ServeisCtrl'
-    }
-  )
-  
-  .state('serveisSetmana', {
-        url: "/serveis/setmana",
-        templateUrl: "templates/serveisSetmana.html",
+  .state('serveis', {
+        url: "/serveis",
+        templateUrl: "templates/serveis.html",
         controller: 'ServeisCtrl'
     }
   )
@@ -65,5 +58,5 @@ angular.module('starter', ['ionic', 'starter.controllers','ngCordova'])
   });
  
     // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/serveis/dia');
+  $urlRouterProvider.otherwise('/serveis');
 });

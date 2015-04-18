@@ -1,0 +1,27 @@
+{
+  "Calendari": 
+  [
+    {
+      "Data":"12/04/2015",
+      "Visites": 
+      [
+       {
+          "IDJardi":"08",
+          "Jardi":"Xavier Barrufet",
+          "Estat":"PENDENT",
+          "Incidencia":true,
+          "Tasques":
+          [
+            {
+              "IDTasca":"01",
+              "Tasca":"Treure fulles",
+              "Estat":"PENDENT",
+              "Incidencia":false,
+              "Fotos":[]
+            }
+          ]
+       }
+      ]
+    }
+  ]
+}

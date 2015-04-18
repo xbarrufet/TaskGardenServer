@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://localhost:8100/#/serveis/chat -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+    <meta charset="utf-8">
+    <script>
+      // Injected Ionic Go To URL Live Reload Plugin
+      window.LiveReloadPlugin_IonicGoToUrl = (function() {
+        var GOTO_KEY = "__ionic_goto_url__";
+        var HISTORY_GO_KEY = "__ionic_history_go__";
+        var GoToUrlPlugin = function(window, host) {
+          this.window = window;
+          this.host = host;
+        }
+        GoToUrlPlugin.identifier = "__ionic_goto_url__";
+        GoToUrlPlugin.version = "1.0";
+        GoToUrlPlugin.prototype.reload = function(path) {
+          try {
+            if(path) {
+              if(path.indexOf(GOTO_KEY) === 0) {
+                this.window.document.location = path.replace(GOTO_KEY, "");
+                return true;
+              }
+              if(path.indexOf(HISTORY_GO_KEY) === 0) {
+                this.window.document.history.go( parseInt(path.replace(HISTORY_GO_KEY, ""), 10));
+                return true;
+              }
+            }
+          } catch(e) {
+            console.log(e);
+          }
+          return false;
+        };
+        return GoToUrlPlugin;
+      })();
+    </script>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link type="text/css" href="./localhost_files/ionic.css" rel="stylesheet">
+    <link type="text/css" href="./localhost_files/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="./localhost_files/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+      <script src="./localhost_files/ng-cordova.min.js"></script>
+      <script src="./localhost_files/cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="./localhost_files/app.js"></script>
+    <script src="./localhost_files/controllers.js"></script>
+   
+  </head>
+
+  <body ng-app="starter" class="grade-a platform-browser platform-macintel platform-ready">
+    <ion-nav-view class="view-container" nav-view-transition="ios" nav-view-direction="none"><ion-view view-title="Serveis V2" class="pane" nav-view="active" style="-webkit-transition-duration: 0ms; transition-duration: 0ms; opacity: 1; -webkit-transform: translate3d(0%, 0px, 0px);">
+   
+   <ion-nav-bar class="bar-positive nav-bar-container" nav-bar-transition="ios" nav-bar-direction="none">
+      <div class="nav-bar-block" nav-bar="cached"><ion-header-bar class="bar-positive bar bar-header disable-user-behavior" align-title="center"><div class="title title-center header-item"></div></ion-header-bar></div><div class="nav-bar-block" nav-bar="active"><ion-header-bar class="bar-positive bar bar-header disable-user-behavior" align-title="center"><div class="title title-center header-item" style="-webkit-transition-duration: 0ms; transition-duration: 0ms; -webkit-transform: translate3d(0px, 0px, 0px);">Serveis V2</div></ion-header-bar></div></ion-nav-bar>
+       
+        <ion-content has-tabs="true" has-header="true" class="scroll-content ionic-scroll  has-header"><div class="scroll" style="-webkit-transform: translate3d(0px, 0px, 0px) scale(1);"> 
+        
+        <div class="incidenciaContacte">
+            <i class="fa fa-users fa-2x"></i>  
+            <span>Xavier Barrufet</span>
+        </div>    
+        <div class="chatContainer"> 
+            <div class="chatMissatge chatSrc">Lorem ipsum</div>
+            <div class="chatMissatge chatSrc">dolor sit amet, consectetur adipiscing elit</div>
+            <div class="chatMissatge chatDst">sed do eiusmod tempor incididunt?</div>
+            <div class="chatMissatge chatSrc">ut labore et dolore magna aliqua</div>
+            <div class="chatMissatge chatDst">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
+           
+        </div>    
+        <br>
+        <div class="chatCrearMissatge">    
+            <i class="fa fa-camera fa-2x chatAddFile"></i>
+            <i class="fa fa-microphone fa-2x chatAddFile"></i>
+            <textarea class="chatEntrarTexte"></textarea>
+            <div class="chatEnviar">    
+                    <i class="fa fa-check fa-2x"></i>
+            </div>   
+        </div>  
+            
+   </div><div class="scroll-bar scroll-bar-v"><div class="scroll-bar-indicator scroll-bar-fade-out" style="-webkit-transform: translate3d(0px, 0px, 0px) scaleY(1); height: 0px;"></div></div></ion-content>
+  
+</ion-view></ion-nav-view>
+  
+<script>//<![CDATA[
+document.write('<script src="//' + (location.hostname || 'localhost') + ':35729/livereload.js?snipver=1"><\/script>')
+//]]></script><script src="./localhost_files/livereload.js"></script>
+
+
+<div class="backdrop"></div></body></html>
