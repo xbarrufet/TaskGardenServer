@@ -2,7 +2,7 @@
 
  
      
-<ion-view view-title="Serveis V2">
+<ion-view view-title="Tasques Programades">
    
    <ion-nav-bar class="bar-positive">
   </ion-nav-bar>
@@ -10,9 +10,15 @@
         <ion-content has-tabs="true" has-header="true"> 
         <ion-slide-box on-slide-changed="slideHasChanged($index)">
           <ion-slide>
-            <a href= "#/serveis/setmana">Setmana</a>  
-           
-                <div class="LabelDia">Dimarts 24/04/2105</div> 
+                <div class="TaskScreenTitol">
+                        <div class="LabelDia">Dimarts 24/04/2105</div> 
+                         <a href= "#/serveis/setmana">
+                            <div class="CanviVisio">
+                                <i class="fa fa-calendar fa-2x">&nbsp;7</i>
+                            </div>
+                            </a> 
+                    </div>
+              
                 <div class="ServeiItemList">
                 <a href= "#/serveis/112233445566/read">
                 <div class="ServeiItem INCIDENCIA">
@@ -140,17 +146,7 @@
         </div> -->    
             
    </ion-content>
- <ion-footer-bar align-title="center" class="bar-positive">
-  <div class="buttons pull-left">
-    <i class="fa fa-camera fa-2x"></i>
-  </div>
-  <div class="buttons pull-center">
-    <i class="fa fa-camera fa-2x"></i>
-  </div>
-      <div class="buttons pull-right">
-    <i class="fa fa-camera fa-2x"></i>
-  </div>
-</ion-footer-bar>
+ 
 
   
 </ion-view> 

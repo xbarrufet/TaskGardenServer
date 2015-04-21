@@ -2,15 +2,103 @@
 
  
      
-<ion-view view-title="Serveis V2">
+<ion-view view-title="Tasques Programades">
    
-   <ion-nav-bar class="bar-positive">
-  </ion-nav-bar>
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+    </ion-nav-bar>
+     <ion-content has-tabs="true" has-header="true">   
        
-        <ion-content has-tabs="true" has-header="true"> 
+     
         <ion-slide-box on-slide-changed="slideHasChanged($index)">
           <ion-slide>
-            <div class="LabelDia">Setmana 24/04/2105-30/04/2015</div> 
+             <div class="TaskScreenTitol">
+                        <div class="LabelDia">Setmana 24/04/2105</div> 
+            
+                </div>
+            
+                <div class="setmanaFila">
+                    <a href= "#/serveis/dia">
+                    <div class="setmanaCellDia">
+                        <p class="setmanaLabelDia">DL-24/04</p>
+                        <div class="setmanaDiaTaskList">
+                                <div class="setmanaDiaTaskItem INCIDENCIA">Xavier Barrufet</div>
+                                <div class="setmanaDiaTaskItem ADVERTENCIA">John McEnroe</div>
+                                <div class="setmanaDiaTaskItem NORMAL">Ruyard Kipling</div>
+                                <div class="setmanaDiaTaskItem NORMAL">Oriol Pujol</div>
+                        </div>
+                    </div>
+                    </a>
+                    <a href= "#/serveis/dia">
+                    <div class="setmanaCellDia">
+                        <p class="setmanaLabelDia">DM-25/04</p>
+                        <div class="setmanaDiaTaskList">
+                                <div class="setmanaDiaTaskItem NORMAL">Xavier Barrufet</div>
+                                <div class="setmanaDiaTaskItem NORMAL">John McEnroe</div>
+                                <div class="setmanaDiaTaskItem NORMAL">Ruyard Kipling</div>
+                                <div class="setmanaDiaTaskItem NORMAL">Oriol Pujol</div>
+                                <div class="setmanaDiaTaskItem NORMAL">Valerio Lazarov  </div>
+                        </div>
+                    </div>
+                     </a>
+                    <a href= "#/serveis/dia"> 
+                    <div class="setmanaCellDia">
+                        <p class="setmanaLabelDia">DX-26/04</p>
+                        <div class="setmanaDiaTaskList">
+                                <div class="setmanaDiaTaskItem NORMAL">Xavier Barrufet</div>
+                                <div class="setmanaDiaTaskItem NORMAL">John McEnroe</div>
+                                <div class="setmanaDiaTaskItem NORMAL">Ruyard Kipling</div>
+                                <div class="setmanaDiaTaskItem NORMAL">Oriol Pujol</div>
+                        </div>
+                    </div>
+                     </a>  
+                    
+                    
+                </div>
+               <div class="setmanaFila">
+                
+                    <a href= "#/serveis/dia">
+                    <div class="setmanaCellDia">
+                        <p class="setmanaLabelDia">DJ-24/04</p>
+                        <div class="setmanaDiaTaskList">
+                                <div class="setmanaDiaTaskItem INCIDENCIA">Xavier Barrufet</div>
+                                <div class="setmanaDiaTaskItem ADVERTENCIA">John McEnroe</div>
+                                <div class="setmanaDiaTaskItem NORMAL">Ruyard Kipling</div>
+                             <div class="setmanaDiaTaskItem NORMAL">Ruyard Kipling</div>
+                                <div class="setmanaDiaTaskItem NORMAL">Oriol Pujol</div>
+                        </div>
+                    </div>
+                         </a>
+                    <a href= "#/serveis/dia">
+                    <div class="setmanaCellDia">
+                        <p class="setmanaLabelDia">DV-25/04</p>
+                        <div class="setmanaDiaTaskList">
+                                <div class="setmanaDiaTaskItem NORMAL">Xavier Barrufet</div>
+                                <div class="setmanaDiaTaskItem NORMAL">John McEnroe</div>
+                                
+                        </div>
+                    </div>
+                         </a>
+                    <a href= "#/serveis/dia">
+                    <div class="setmanaCellDia">
+                        <p class="setmanaLabelDia">DV-26/04</p>
+                        <div class="setmanaDiaTaskList">
+                               
+                                <div class="setmanaDiaTaskItem NORMAL">Ruyard Kipling</div>
+                                <div class="setmanaDiaTaskItem NORMAL">Oriol Pujol</div>
+                        </div>
+                    </div>
+                   </a>
+                </div>   
+               
+            </div>
+          </ion-slide>
+         <ion-slide>
+             <div class="TaskScreenTitol">
+                        <div class="LabelDia">Setmana 31/04/2105</div> 
+            
+                </div>
                 <div class="setmanaFila">
                     <a href= "#/serveis/dia">
                     <div class="setmanaCellDia">
@@ -88,85 +176,10 @@
             </div>
           </ion-slide>
          <ion-slide>
-            <div class="LabelDia">Setmana 24/04/2105-30/04/2015</div> 
-                <div class="setmanaFila">
-                    <a href= "#/serveis/dia">
-                    <div class="setmanaCellDia">
-                        <p class="setmanaLabelDia">Dilluns-24/04</p>
-                        <div class="setmanaDiaTaskList">
-                                <div class="setmanaDiaTaskItem INCIDENCIA">Xavier Barrufet</div>
-                                <div class="setmanaDiaTaskItem ADVERTENCIA">John McEnroe</div>
-                                <div class="setmanaDiaTaskItem NORMAL">Ruyard Kipling</div>
-                                <div class="setmanaDiaTaskItem NORMAL">Oriol Pujol</div>
-                        </div>
-                    </div>
-                    </a>
-                    <a href= "#/serveis/dia">
-                    <div class="setmanaCellDia">
-                        <p class="setmanaLabelDia">Dimarts-25/04</p>
-                        <div class="setmanaDiaTaskList">
-                                <div class="setmanaDiaTaskItem NORMAL">Xavier Barrufet</div>
-                                <div class="setmanaDiaTaskItem NORMAL">John McEnroe</div>
-                                <div class="setmanaDiaTaskItem NORMAL">Ruyard Kipling</div>
-                                <div class="setmanaDiaTaskItem NORMAL">Oriol Pujol</div>
-                                <div class="setmanaDiaTaskItem NORMAL">Valerio Lazarov  </div>
-                        </div>
-                    </div>
-                     </a>
-                    <a href= "#/serveis/dia">
-                    <div class="setmanaCellDia">
-                        <p class="setmanaLabelDia">Dimecres-26/04</p>
-                        <div class="setmanaDiaTaskList">
-                                <div class="setmanaDiaTaskItem NORMAL">Xavier Barrufet</div>
-                                <div class="setmanaDiaTaskItem NORMAL">John McEnroe</div>
-                                <div class="setmanaDiaTaskItem NORMAL">Ruyard Kipling</div>
-                                <div class="setmanaDiaTaskItem NORMAL">Oriol Pujol</div>
-                        </div>
-                    </div>
-                         </a>
-                    
-                    
+            <div class="TaskScreenTitol">
+                        <div class="LabelDia">Setmana 6/05/2105</div> 
+            
                 </div>
-               <div class="setmanaFila">
-                
-                    <a href= "#/serveis/dia">
-                    <div class="setmanaCellDia">
-                        <p class="setmanaLabelDia">Dijous-24/04</p>
-                        <div class="setmanaDiaTaskList">
-                                <div class="setmanaDiaTaskItem INCIDENCIA">Xavier Barrufet</div>
-                                <div class="setmanaDiaTaskItem ADVERTENCIA">John McEnroe</div>
-                                <div class="setmanaDiaTaskItem NORMAL">Ruyard Kipling</div>
-                             <div class="setmanaDiaTaskItem NORMAL">Ruyard Kipling</div>
-                                <div class="setmanaDiaTaskItem NORMAL">Oriol Pujol</div>
-                        </div>
-                    </div>
-                         </a>
-                    <a href= "#/serveis/dia">
-                    <div class="setmanaCellDia">
-                        <p class="setmanaLabelDia">Divendres-25/04</p>
-                        <div class="setmanaDiaTaskList">
-                                <div class="setmanaDiaTaskItem NORMAL">Xavier Barrufet</div>
-                                <div class="setmanaDiaTaskItem NORMAL">John McEnroe</div>
-                                
-                        </div>
-                    </div>
-                         </a>
-                    <a href= "#/serveis/dia">
-                    <div class="setmanaCellDia">
-                        <p class="setmanaLabelDia">Dissabte-26/04</p>
-                        <div class="setmanaDiaTaskList">
-                               
-                                <div class="setmanaDiaTaskItem NORMAL">Ruyard Kipling</div>
-                                <div class="setmanaDiaTaskItem NORMAL">Oriol Pujol</div>
-                        </div>
-                    </div>
-                   </a>
-                </div>   
-               
-            </div>
-          </ion-slide>
-         <ion-slide>
-            <div class="LabelDia">Setmana 24/04/2105-30/04/2015</div> 
                 <div class="setmanaFila">
                     <a href= "#/serveis/dia">
                     <div class="setmanaCellDia">
@@ -266,5 +279,6 @@
         </div> -->    
             
    </ion-content>
+ 
   
 </ion-view> 

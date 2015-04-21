@@ -2,7 +2,7 @@
 
  
      
-<ion-view view-title="Detall">
+<ion-view view-title="Detall Tasques">
    
     <ion-nav-bar class="bar-positive">
       <ion-nav-back-button>
@@ -19,11 +19,12 @@
                         </div> -->
           <!-- <button ng-show="modus == 'edit'" class="button button-small icon-left ion-camera button-positive" ng-click="testScanEND('112233445566')">Scan Test</button>  -->  
     
-    <div class="TaskItemHeader">     
+    <div class="TaskItemHeader">    
+         <a href= "#/clients/xavierbarrufet">
         <div class="TaskItemAdreça">
             <p class="Nom">Xavier Barrufet</p>
-            <p class="Adreça">C/ Ntra Sra de la Merce 10 - Gava</p>    
         </div>
+        </a>
         <div class="TaskScanButton">
             <i class="fa fa-qrcode fa-3x"></i>
         </div>
@@ -32,7 +33,7 @@
         <div class="TaskItem">
             <i class="fa fa-square-o fa-2x checkBox"/></i><span>Regar</span>
             <i class="fa fa-camera fa-2x camara"></i>
-            <p class="numFotos">4</p>
+            <p class="numFotos">2</p>
         </div>
         <div class="TaskItem">
             <i class="fa fa-square-o fa-2x checkBox"/></i><span>Ensofatar</span><i class="fa fa-camera fa-2x camara"></i>
@@ -42,7 +43,14 @@
         </div>
        
     </div>
-<a href= "#/serveis/crearIncidencia"><i class="fa fa-exclamation-circle fa-3x"></i></a>
+
+ <div class="incidenciaAccions">    
+            <a href= "#/serveis/crearIncidencia">
+            <div class="incidenciaAfegir">       
+                <span>Incidencia</span>
+            </div>
+            </a>
+        </div>  
          
      <!-- <div class="card">
             <div class="item item-divider">
@@ -83,5 +91,5 @@
          
          
             </ion-content>
-  
+ 
 </ion-view> 

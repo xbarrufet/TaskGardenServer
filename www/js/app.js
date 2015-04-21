@@ -57,6 +57,28 @@ angular.module('starter', ['ionic', 'starter.controllers','ngCordova'])
       
   })
   
+   .state('clients', {
+    url: "/clients/clientsList",
+    templateUrl: "templates/clientsList.html",
+    controller: 'ServeisCtrl'
+      
+  })
+  
+     .state('xavierbarrufet', {
+    url: "/clients/xavierbarrufet",
+    templateUrl: "templates/xavierbarrufet.html",
+    controller: 'ServeisCtrl'
+      
+  })
+  
+  .state('clientsDetail', {
+    url: "/clients/detail/:clientCode",
+    templateUrl: "templates/clientsDetail.html",
+    controller: 'ServeisCtrl'
+      
+  })
+  
+  
    .state('serveidetailStart', {
     url: "/serveidetailStart/:serveiId",
     templateUrl: "templates/serveidetailStart.html",
